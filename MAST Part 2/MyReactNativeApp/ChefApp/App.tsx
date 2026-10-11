@@ -332,3 +332,336 @@ function isEmpty(value: string) {
   return value == null || value.trim().length === 0;
 }
 
+// Application Styling
+const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#F1F5F9',
+  },
+
+  scrollContent: {
+    flexGrow: 1,
+    paddingBottom: 25,
+  },
+
+  header: {
+    backgroundColor: '#2563EB',
+    alignItems: 'center',
+    paddingHorizontal: 22,
+    paddingTop: 28,
+    paddingBottom: 32,
+    borderBottomLeftRadius: 25,
+    borderBottomRightRadius: 25,
+  },
+
+  logoCircle: {
+    width: 70,
+    height: 70,
+    borderRadius: 35,
+    backgroundColor: '#FFFFFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 15,
+    elevation: 4,
+  },
+
+  logoText: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    color: '#2563EB',
+  },
+
+  WelcomeText: {
+    fontSize: 27,
+    fontWeight: 'bold',
+    color: '#FFFFFF',
+    textAlign: 'center',
+  },
+
+  headerSubtitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#DBEAFE',
+    marginTop: 7,
+  },
+
+  headerDescription: {
+    fontSize: 14,
+    color: '#FFFFFF',
+    lineHeight: 21,
+    textAlign: 'center',
+    marginTop: 12,
+  },
+
+  formCard: {
+    backgroundColor: '#FFFFFF',
+    marginHorizontal: 18,
+    marginTop: 22,
+    padding: 20,
+    borderRadius: 18,
+    elevation: 3,
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.08,
+    shadowRadius: 5,
+  },
+
+  sectionTitle: {
+    fontSize: 21,
+    fontWeight: 'bold',
+    color: '#0F172A',
+    marginBottom: 7,
+  },
+
+  sectionDescription: {
+    fontSize: 13,
+    color: '#64748B',
+    lineHeight: 20,
+    marginBottom: 18,
+  },
+
+  inputWrapper: {
+    marginBottom: 19,
+  },
+
+  inputLabel: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: '#334155',
+    marginBottom: 8,
+  },
+
+  helperText: {
+    fontSize: 12,
+    color: '#64748B',
+    marginBottom: 10,
+  },
+
+  modernInput: {
+    minHeight: 50,
+    borderWidth: 1,
+    borderColor: '#CBD5E1',
+    borderRadius: 12,
+    paddingHorizontal: 14,
+    fontSize: 15,
+    color: '#0F172A',
+    backgroundColor: '#F8FAFC',
+  },
+
+  descriptionInput: {
+    minHeight: 95,
+    paddingTop: 13,
+  },
+
+  courseContainer: {
+    gap: 9,
+  },
+
+  courseButton: {
+    paddingVertical: 13,
+    paddingHorizontal: 12,
+    borderWidth: 1,
+    borderColor: '#CBD5E1',
+    borderRadius: 10,
+    backgroundColor: '#F8FAFC',
+  },
+
+  selectedCourse: {
+    backgroundColor: '#DBEAFE',
+    borderColor: '#2563EB',
+    borderWidth: 2,
+  },
+
+  courseButtonText: {
+    fontSize: 14,
+    color: '#334155',
+    textAlign: 'center',
+  },
+
+  selectedCourseText: {
+    color: '#1D4ED8',
+    fontWeight: 'bold',
+  },
+
+  primaryButton: {
+    backgroundColor: '#2563EB',
+    paddingVertical: 15,
+    paddingHorizontal: 12,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 3,
+    elevation: 2,
+  },
+
+  primaryButtonText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#FFFFFF',
+  },
+
+  errorBox: {
+    backgroundColor: '#FEE2E2',
+    borderWidth: 1,
+    borderColor: '#FECACA',
+    padding: 12,
+    borderRadius: 10,
+    marginBottom: 18,
+  },
+
+  errorText: {
+    color: '#B91C1C',
+    fontSize: 14,
+    fontWeight: '600',
+  },
+
+  menuSection: {
+    marginHorizontal: 18,
+    marginTop: 28,
+  },
+
+  menuSectionHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 5,
+  },
+
+  countCircle: {
+    minWidth: 42,
+    height: 42,
+    paddingHorizontal: 10,
+    borderRadius: 21,
+    backgroundColor: '#DBEAFE',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  countText: {
+    fontSize: 17,
+    fontWeight: 'bold',
+    color: '#2563EB',
+  },
+
+  emptyCard: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 16,
+    padding: 25,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
+  },
+
+  emptyIconCircle: {
+    width: 55,
+    height: 55,
+    borderRadius: 28,
+    backgroundColor: '#DBEAFE',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 14,
+  },
+
+  emptyIcon: {
+    fontSize: 30,
+    color: '#2563EB',
+    fontWeight: 'bold',
+  },
+
+  emptyTitle: {
+    fontSize: 17,
+    fontWeight: 'bold',
+    color: '#334155',
+    marginBottom: 8,
+  },
+
+  emptyText: {
+    fontSize: 14,
+    color: '#64748B',
+    textAlign: 'center',
+    lineHeight: 21,
+  },
+
+  menuCard: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 14,
+    padding: 17,
+    marginBottom: 13,
+    borderLeftWidth: 5,
+    borderLeftColor: '#2563EB',
+    elevation: 2,
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.08,
+    shadowRadius: 3,
+  },
+
+  menuCardHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    gap: 10,
+    marginBottom: 10,
+  },
+
+  dishName: {
+    flex: 1,
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#0F172A',
+  },
+
+  priceText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#2563EB',
+  },
+
+  courseBadge: {
+    alignSelf: 'flex-start',
+    backgroundColor: '#DBEAFE',
+    borderRadius: 7,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    marginBottom: 10,
+  },
+
+  courseBadgeText: {
+    fontSize: 12,
+    fontWeight: 'bold',
+    color: '#1D4ED8',
+  },
+
+  menuDescription: {
+    fontSize: 14,
+    color: '#475569',
+    lineHeight: 21,
+  },
+
+  footerText: {
+    textAlign: 'center',
+    fontSize: 12,
+    color: '#94A3B8',
+    marginTop: 28,
+  },
+});
+
+/* References
+React Native Restaurant Menu Management App
+The following sources support the React, React Native and Expo components and APIs used in the application. 
+i used these webistes to help me coding, with function of the app and styling
+1. App and Flow (n.d.) react-native-safe-area-context: SafeAreaProvider. Available at: https://github.com/AppAndFlow/react-native-safe-area-context/blob/main/docs/docs/api/safe-area-provider.mdx (Accessed: 11 October 2026).
+2. Expo (n.d.) StatusBar. Available at: https://docs.expo.dev/versions/latest/sdk/status-bar/ (Accessed: 11 October 2026).
+3. React (n.d.) useState. Available at: https://react.dev/reference/react/useState (Accessed: 11 October 2026).
+4. React Native (n.d.) Alert. Available at: https://reactnative.dev/docs/alert (Accessed: 11 October 2026).
+5. React Native (n.d.) Keyboard. Available at: https://reactnative.dev/docs/keyboard (Accessed: 11 October 2026).
+6. React Native (n.d.) ScrollView. Available at: https://reactnative.dev/docs/scrollview (Accessed: 11 October 2026).
+7. React Native (n.d.) StyleSheet. Available at: https://reactnative.dev/docs/stylesheet (Accessed: 11 October 2026).
+8. React Native (n.d.) TextInput. Available at: https://reactnative.dev/docs/textinput (Accessed: 11 October 2026). 
+9. React Native (n.d.) View. Available at: https://reactnative.dev/docs/view (Accessed: 11 October 2026). */
