@@ -327,3 +327,8 @@ function MainScreen() {
   );
 }
 
+// Error Handling
+function isEmpty(value: string) {
+  return value == null || value.trim().length === 0;
+}
+
