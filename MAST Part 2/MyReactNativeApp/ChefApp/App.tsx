@@ -24,3 +24,19 @@ export default function App() {
   );
 }
 
+function MainScreen() {
+  const [DishName, setDishName] = useState('');
+  const [Description, setDescription] = useState('');
+  const [Course, setCourse] = useState('');
+  const [Price, setPrice] = useState('');
+  const [Error, setError] = useState('');
+
+  const [MenuItems, setMenuItems] = useState<
+    {
+      DishName: string;
+      Description: string;
+      Course: string;
+      Price: string;
+    }[]
+  >([]);
+
