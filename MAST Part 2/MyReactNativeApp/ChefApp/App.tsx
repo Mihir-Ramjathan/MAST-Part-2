@@ -40,3 +40,51 @@ function MainScreen() {
     }[]
   >([]);
 
+  // Add Menu Item
+  function addMenuItem() {
+    if (
+      isEmpty(DishName) ||
+      isEmpty(Description) ||
+      isEmpty(Course) ||
+      isEmpty(Price)
+    ) {
+      setError('Please complete all the fields.');
+      return;
+    }
+
+    const PriceNumber = Number(Price);
+
+    if (
+      !Number.isFinite(PriceNumber) ||
+      PriceNumber <= 0
+    ) {
+      setError('Please enter a valid price greater than zero.');
+      return;
+    }
+
+    const NewItem = {
+      DishName: DishName.trim(),
+      Description: Description.trim(),
+      Course: Course,
+      Price: PriceNumber.toFixed(2),
+    };
+
+    setMenuItems((currentItems) => [
+      ...currentItems,
+      NewItem,
+    ]);
+
+    setDishName('');
+    setDescription('');
+    setCourse('');
+    setPrice('');
+    setError('');
+
+    Keyboard.dismiss();
+
+    Alert.alert(
+      'Menu Item Added',
+      NewItem.DishName + ' has been added successfully.'
+    );
+  }
+
